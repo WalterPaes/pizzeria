@@ -1,8 +1,8 @@
 import { Router } from "express";
 import PizzaRouter from "./PizzaRoutes.js";
 
-const router = new Router();
+const routes = new Router();
 
-router.use(PizzaRouter);
+router.use('/pizza', PizzaRouter);
 
-export default router;
+export default routes;
