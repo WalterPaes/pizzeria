@@ -4,8 +4,12 @@ import Pizza from "./Pizza.js";
 const { Schema } = mongoose;
 
 const Order = new Schema({
-    pizza: [Pizza],
-    amount: Number
+    items: [{
+        item: {
+            pizza: Pizza,
+            amount: Number
+        }
+    }]
 });
 
 export default Order;
