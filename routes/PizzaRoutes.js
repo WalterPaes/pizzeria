@@ -1,10 +1,12 @@
 import controller from '../controller/PizzaController.js'
 import { Router } from 'express';
 
-const router = new Router();
+const pizzaRouter = new Router();
 
-router.get('/', controller.list);
-router.get('/:id', controller.getById);
-router.post('/', controller.create);
-router.put('/:id', controller.updateById);
-router.put('/:id', controller.deleteById);
+pizzaRouter.get('/', controller.list);
+pizzaRouter.get('/:id', controller.getById);
+pizzaRouter.post('/', controller.create);
+pizzaRouter.put('/:id', controller.updateById);
+pizzaRouter.put('/:id', controller.deleteById);
+
+export default pizzaRouter;

@@ -7,3 +7,5 @@ const Pizza = new Schema({
     price: Number,
     ingredients: [String]
 })
+
+export default Pizza;
