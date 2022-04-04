@@ -1,7 +1,8 @@
 import mongoose from "mongoose";
+import config from "config";
 
-main().catch(err => console.log(err))
+mongoose.connect(config.get('mongo.pizzeria'));
 
-async function main() {
-    await mongoose.connect('mongo.pizzeria');
-}
+mongoose.connection.on('error', err => console.log(err))
+
+export default mongoose;
